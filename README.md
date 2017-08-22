@@ -22,3 +22,13 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 ## Creating the app
 
 1. mix phoenix.new vixet
+    1. creates new project
+2. mix ecto.create
+    1. fix required: update Vixet.Repo in dev.exs
+    2. run mix ecto.create again
+3. update web/templates/page/index.html.eex
+    1. remove old boilerplate
+    2. update to project specific code
+4. add web/models/user.ex
+    1. defines fields for a user
+5. update lib/vixet/repo.ex
