@@ -79,15 +79,16 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 ### Chapter 4 modifications
 ### Ecto and changesets
 ##### ecto is a wrapper for relational databases
+
 1. update: lib/vixet/repo.ex
-  1. revert this file back to the created state (removing functions)
+    1. revert this file back to the created state (removing functions)
 
 2. update: list/vixet.ex
-  1. revert this file back to created state (remove commented-out line)
+    1. revert this file back to created state (remove commented-out line)
 
 3. verify: cli: mix ecto.create
-  1. ^ this command creates the underlying database
-  
+    1. ^ this command creates the underlying database
+
 4. a
 5. a
 6. a
