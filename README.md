@@ -21,6 +21,7 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 
 # Creating the app
 ### Chapter 3 modifications
+#### controllers, views, templates
 
 1. mix phoenix.new vixet
     1. creates new project
@@ -73,3 +74,26 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 15. view /web/templates/layout/app.html.eex
     1. verify alerts exist for errors from ^14
     2. also note this file can be edited for sweeping site layout changes.
+
+
+### Chapter 4 modifications
+### Ecto and changesets
+##### ecto is a wrapper for relational databases
+1. update: lib/vixet/repo.ex
+  2. 
+2. a
+3. a
+4. a
+5. a
+6. a
+7. a
+8. a
+9. a
+10. a
+11. a
+12. a
+13. a
+14. a
+15. a
+16. a
+17. a
