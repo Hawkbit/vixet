@@ -19,7 +19,8 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
 
-## Creating the app
+# Creating the app
+### Chapter 3 modifications
 
 1. mix phoenix.new vixet
     1. creates new project
@@ -56,4 +57,19 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 
 10. add /web/templates/user/index.html.eex
     1. ^mostly html markup with some embedded elixir
-    2.
+
+11. view /web/web.ex
+    1. verify the items being imported into the views
+
+12. update /web/controllers/user_controller.ex
+    1. add show() function to show a single user
+
+13. add /web/templates/user/show.html.eex
+    1. adding embedded elixir to render user by id  
+
+14. view /web/views/error_view.ex
+    1. simple verify error functions render()
+
+15. view /web/templates/layout/app.html.eex
+    1. verify alerts exist for errors from ^14
+    2. also note this file can be edited for sweeping site layout changes.
