@@ -80,7 +80,7 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 ### Ecto and changesets
 ##### ecto is a wrapper for relational databases
 1. update: lib/vixet/repo.ex
-  2. 
+  2. this change is for
 2. a
 3. a
 4. a
