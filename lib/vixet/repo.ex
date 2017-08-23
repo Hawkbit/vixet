@@ -1,8 +1,7 @@
 defmodule Vixet.Repo do
-  @moduledoc """
-  In memory repository.
-  """
+  use Ecto.Repo, otp_app: :vixet
 
+  @doc """
   def all(Vixet.User) do
     [%Vixet.User{id: "1", name: "Aaron", username: "Aaron Master", password: "elixir"},
      %Vixet.User{id: "2", name: "Brad", username: "Brad Nelson", password: "phoenix"},
@@ -19,4 +18,5 @@ defmodule Vixet.Repo do
       Enum.all?(params, fn {key, val} -> Map.get(map, key) == val end)
     end
   end
+  """
 end

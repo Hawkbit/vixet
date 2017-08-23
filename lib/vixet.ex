@@ -9,7 +9,7 @@ defmodule Vixet do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
-      ###############supervisor(Vixet.Repo, []),
+      supervisor(Vixet.Repo, []),
       # Start the endpoint when the application starts
       supervisor(Vixet.Endpoint, []),
       # Start your own worker by calling: Vixet.Worker.start_link(arg1, arg2, arg3)
