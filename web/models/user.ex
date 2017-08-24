@@ -1,3 +1,13 @@
 defmodule Vixet.User do
-  defstruct [:id, :name, :username, :password]
+  use Vixet.Web, :model
+
+  schema "users" do
+    field :name, string
+    field :username, string
+    field :password, string, virtual: true
+    field :password_hash, string
+
+    timestamps
+  end
+  # defstruct [:id, :name, :username, :password]
 end

@@ -89,7 +89,10 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 3. verify: cli: mix ecto.create
     1. ^ this command creates the underlying database
 
-4. a
+4. update: web/models/user.ex
+    1. this is schema update
+    2. uses a DSL in ecto to define the data
+    
 5. a
 6. a
 7. a
