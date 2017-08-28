@@ -92,12 +92,26 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 4. update: web/models/user.ex
     1. this is schema update
     2. uses a DSL in ecto to define the data
+
+5. run: cli: mix ecto.gen.migration create_user
+    1. MIGRATIONS!
+    2. update the migration file to add the change() function
+
+6. run: cli: mix ecto.migrate
+    1. ^ this runs the migration
+
+7. update web/controllers/user_controller.ex
+    1. add reference to alias Vixet.User
+    2. add new() function for new users
+    3. changeset - lets Ecto manage record changes, cast parameters and perform validations.
+
+8. update web/models/user.ex
+    1. add a changeset() function to validate length of username and cast params
+
+9. update web/router.ex
+    1. delete the get user references
+    2. add a resources line that shows common REST actions
     
-5. a
-6. a
-7. a
-8. a
-9. a
 10. a
 11. a
 12. a
