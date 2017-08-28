@@ -111,8 +111,14 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 9. update web/router.ex
     1. delete the get user references
     2. add a resources line that shows common REST actions
-    
-10. a
+    3. leaving resources as open would draw all four endpoints
+    4. specifying only: will only create the ones in brackets
+    5. also, run cli: mix phoenix.routes to view all routes
+
+10. add web/templates/new.html.eex
+    1. this will make the form for a new user
+    2. use a helper function to build the form - this makes an anonymous function
+    3. form_for provides UTF-8 encoding and security. 
 11. a
 12. a
 13. a
