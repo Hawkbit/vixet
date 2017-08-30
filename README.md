@@ -118,9 +118,15 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 10. add web/templates/new.html.eex
     1. this will make the form for a new user
     2. use a helper function to build the form - this makes an anonymous function
-    3. form_for provides UTF-8 encoding and security. 
-11. a
-12. a
+    3. form_for provides UTF-8 encoding and security.
+
+11. update web/controllers/user_controller.ex
+    1. add create() function - this creates the user entered in the ^ form
+    2. also added a case function to cover error messages
+
+12. update web/templates/user/new.html.eex
+    1. added error messages for the form validation in models/user.ex
+
 13. a
 14. a
 15. a
