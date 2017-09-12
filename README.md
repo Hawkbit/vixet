@@ -145,7 +145,12 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 3. change: web/controllers/user_controller.ex
     1. change create() to use User.registration_changeset()
 
-4. a
+4. create: web/controllers/auth.ex
+    1. define module Vixet.auth
+    2. import Plug.Conn
+    3. define init()
+    4. define call()
+
 5. a
 6. a
 7. a
