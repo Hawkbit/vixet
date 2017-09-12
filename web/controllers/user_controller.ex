@@ -1,9 +1,10 @@
 defmodule Vixet.UserController do
   use Vixet.Web, :controller
+  plug :authenticate when action in [:index, :show]
 
   def index(conn, _params) do
-    users = Repo.all(Vixet.User)
-    render conn, "index.html", users: users
+      users = Repo.all(Vixet.User)
+      render conn, "index.html", users: users
   end
 
   def show(conn, %{"id" => id}) do
@@ -22,10 +23,22 @@ defmodule Vixet.UserController do
     case Repo.insert(changeset) do
       {:ok, user} ->
         conn
+        |> Vixet.Auth.login(user)
         |> put_flash(:info, "#{user.name} created!")
         |> redirect(to: user_path(conn, :index))
       {:error, changeset} ->
         render(conn, "new.html", changeset: changeset)
+    end
+  end
+
+  defp authenticate(conn, _opts) do
+    if conn.assigns.current_user do
+      conn
+    else
+      conn
+      |> put_flash(:error, "You must be logged in to access that page.")
+      |> redirect(to: page_path(conn, :index))
+      |> halt()
     end
   end
 end

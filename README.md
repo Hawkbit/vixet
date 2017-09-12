@@ -151,10 +151,20 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
     3. define init()
     4. define call()
 
-5. a
-6. a
-7. a
-8. a
+5. update: web/router.ex
+    1. add a plug defined above to the router.ex
+
+6. update: web/controllers/user_controller.ex
+    1. add a private function authenticate()
+    2. add options to the authenticate()
+    3. update plug note in file
+
+7. update: web/controllers/auth.ex
+    1. add a login()
+
+8. udpate: web/controllers/user_controller.ex
+    1. update the create() to reference the auth.ex login()
+    
 9. a
 10. a
 11. a
