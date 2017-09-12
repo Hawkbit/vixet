@@ -164,7 +164,12 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 
 8. udpate: web/controllers/user_controller.ex
     1. update the create() to reference the auth.ex login()
-    
-9. a
-10. a
+
+9. update: web/router.ex
+    1. add a route reference to SessionController
+
+10. create: web/controllers/session_controller.ex
+    1. add reference to Vixet.Web controller
+    2. add a new() to render the login form
+
 11. a
