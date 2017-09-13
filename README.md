@@ -182,3 +182,12 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 
 13. add: web/templates/session/new.html.eex
     1. add template html.eex to make new form page
+
+14. update: web/templages/layout/app.html.eex
+    1. adding templating to show user login status
+
+15. update: web/controllers/auth.ex
+    1. add logout() to handle the session delete
+
+16. update: web/controllers/session_controller.ex
+    1. add delete() to handle the logout and delete session action

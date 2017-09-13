@@ -14,7 +14,14 @@ defmodule Vixet.SessionController do
       {:error, _reason, conn} ->
         conn
         |> put_flash(:error, "Invalid username or password")
-        |> render("new.html") 
+        |> render("new.html")
     end
   end
+
+  def delete(conn, _) do
+    conn
+    |> Vixet.Auth.logout()
+    |> redirect(to: page_path(conn, :index))
+  end
+  
 end
