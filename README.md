@@ -171,5 +171,14 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 10. create: web/controllers/session_controller.ex
     1. add reference to Vixet.Web controller
     2. add a new() to render the login form
+    3. add a create() to takes arguements to make a new session
 
-11. a
+11. update: web/controllers/auth.ex
+    1. add a login_by_username_and_pass() to handle new func in session
+    2. add import Comeonin.Bcrypt reference
+
+12. add: web/views/session_view.ex
+    1. define module for session view
+
+13. add: web/templates/session/new.html.eex
+    1. add template html.eex to make new form page
